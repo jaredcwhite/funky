@@ -5,7 +5,7 @@
  * @returns {String}
  */
 module.exports = (config) => {
-  let response = '';
+  let properties = '';
   const tokenKeys = [
     {key: 'colors', prefix: 'color'},
     {key: 'fonts', prefix: 'font'},
@@ -13,24 +13,24 @@ module.exports = (config) => {
   ];
 
   if (!config.generateCustomProperties) {
-    return response;
+    return properties;
   }
 
   // Loops each option and if that config exists, it generates custom properties
   tokenKeys.forEach((tokenKey) => {
     if (config.hasOwnProperty(tokenKey.key)) {
       Object.keys(config[tokenKey.key]).forEach((key) => {
-        response += `--${tokenKey.prefix}-${key}: ${config[tokenKey.key][key]};`;
+        properties += `--${tokenKey.prefix}-${key}: ${config[tokenKey.key][key]};`;
       });
     }
   });
 
   // If we generated some props, wrap them in a :root selector
-  if (response.length) {
-    response = `:root {
-      ${response}
+  if (properties.length) {
+    properties = `:root {
+      ${properties}
     }`;
   }
 
-  return response;
+  return properties;
 };
