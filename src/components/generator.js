@@ -15,12 +15,12 @@ module.exports = (config, targets, prefix = '') => {
     const data = config.utilities[key];
 
     if (targets.includes(data.output)) {
-      Object.keys(data.items).forEach((itemKey) => {
-        response += `
-        .${prefix}${key}-${itemKey} {
-          ${data.property}: ${data.items[itemKey]};
+      // Object.keys(data.items).forEach((itemKey) => {
+      response += `
+        [style*='${prefix}${key}:'] {
+          ${data.property}: var(--${prefix}${key});
         }`.trim();
-      });
+      // });
     }
   });
 

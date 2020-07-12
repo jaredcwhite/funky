@@ -52,7 +52,7 @@ const init = () => {
   Object.keys(config.breakpoints).forEach((key) => {
     css += `
       @media (width >= ${config.breakpoints[key]}) {
-        ${generator(config, ['responsive'], `${key}\\:`)}
+        ${generator(config, ['responsive'], `${key}-`)}
       }
     `.trim();
   });
@@ -67,7 +67,7 @@ const init = () => {
   shell.exec(`echo "${css}" > ${outputPath}`);
 
   console.clear();
-  console.log(`\n\n`, green(bold(`✔  Utility css generated at`), `\n\n`));
+  console.log(`\n\n`, green(bold(`✔  CSS generated at '${outputPath}'`), `\n\n`));
 };
 
 init();

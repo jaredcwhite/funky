@@ -4,99 +4,93 @@ const colors = {
   dark: '#252525',
 };
 
-const fonts = {
-  base: 'Helvetica, sans-serif',
-  serif: 'Georgia, serif',
-};
+// const fonts = {
+//   base: 'Helvetica, sans-serif',
+//   serif: 'Georgia, serif',
+// };
 
-const sizeScale = {
-  '300': '0.8rem',
-  '400': '1rem',
-  '500': '1.25rem',
-  '600': '1.56rem',
-  '700': '1.95rem',
-  '800': '2.44rem',
-  '900': '3.05rem',
-};
+// const sizeScale = {
+//   '300': '0.8rem',
+//   '400': '1rem',
+//   '500': '1.25rem',
+//   '600': '1.56rem',
+//   '700': '1.95rem',
+//   '800': '2.44rem',
+//   '900': '3.05rem',
+// };
 
 module.exports = {
   colors,
-  sizeScale,
-  fonts,
+  // sizeScale,
+  // fonts,
   generateCustomProperties: true,
   utilities: {
     'bg': {
-      items: colors,
       output: 'standard',
       property: 'background',
     },
     'color': {
-      items: colors,
       output: 'standard',
       property: 'color',
     },
-    'font': {
-      items: fonts,
+    'f-family': {
       output: 'standard',
       property: 'font-family',
     },
-    'gap-top': {
-      items: sizeScale,
-      output: 'standard',
+    'ml': {
+      items: '',
+      output: 'responsive',
+      property: 'margin-left',
+    },
+    'mr': {
+      items: '',
+      output: 'responsive',
+      property: 'margin-right',
+    },
+    'mt': {
+      items: '',
+      output: 'responsive',
       property: 'margin-top',
     },
-    'gap-bottom': {
-      items: sizeScale,
-      output: 'standard',
+    'mb': {
+      output: 'responsive',
       property: 'margin-bottom',
     },
-    'leading': {
-      items: {
-        tight: '1.2',
-        mid: '1.5',
-        loose: '1.7',
-      },
+    'lh': {
       output: 'standard',
       property: 'line-height',
     },
-    'measure': {
-      items: {
-        long: '75ch',
-        short: '60ch',
-        compact: '40ch',
-      },
-      output: 'standard',
+    'max-w': {
+      output: 'responsive',
       property: 'max-width',
     },
-    'pad-top': {
-      items: sizeScale,
-      output: 'standard',
+    'pt': {
+      output: 'responsive',
       property: 'padding-top',
     },
-    'pad-bottom': {
-      items: sizeScale,
-      output: 'standard',
+    'pb': {
+      output: 'responsive',
       property: 'padding-bottom',
     },
-    'pad-left': {
-      items: sizeScale,
-      output: 'standard',
+    'pl': {
+      output: 'responsive',
       property: 'padding-left',
     },
-    'text': {
-      items: sizeScale,
+    'pr': {
+      output: 'responsive',
+      property: 'padding-right',
+    },
+    'fsize': {
       output: 'responsive',
       property: 'font-size',
     },
-    'weight': {
-      items: {
-        light: '300',
-        regular: '400',
-        mid: '600',
-        bold: '700',
-      },
+    'fweight': {
       output: 'standard',
       property: 'font-weight',
+    },
+    'position': {
+      output: 'responsive',
+      property: 'position',
     },
   },
   breakpoints: {
