@@ -4,7 +4,7 @@
   "description": "Your class-based utility",
   "main": "src/index.js",
   "scripts": {
-    "test": "rm tokens.css && node src/index.js --out tokens.css",
+    "test": "rimraf tokens.css && node src/index.js --out tokens.css",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
   },
@@ -25,6 +25,7 @@
   "dependencies": {
     "clean-css": "4.2.3",
     "cosmiconfig": "6.0.0",
+    "rimraf": "3.0.2",
     "shelljs": "0.8.4"
   },
   "devDependencies": {

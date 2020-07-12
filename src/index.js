@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const {cosmiconfig, cosmiconfigSync} = require('cosmiconfig');
-const {red, blue, green, bold} = require('chalk');
+const {red, blue, green, gray, yellow, bold} = require('chalk');
 const CleanCSS = require('clean-css');
 const fs = require('fs');
 const shell = require('shelljs');
@@ -38,10 +38,11 @@ const init = () => {
   const outputPath = config.outputPath || process.argv.slice(pathIndex + 1)[0];
 
   // The path has to contain a filename so we need to bail if that's not the case
-  if (outputPath.indexOf('.css') < 0) {
-    console.log(red(`Please add a css file to your path.`));
-    console.log(red(`Example: path/to/my/folder/tokens.css`));
-    console.log(blue('Exiting.'));
+  if (!outputPath.endsWith('.css')) {
+    console.log(`\n\n`);
+    console.log(red(bold(`Please add a css file to your path.`)));
+    console.log(gray(`Example: path/to/my/folder/tokens.css`, `\n\n`));
+    console.log(yellow('Exiting.'), `\n\n`);
     return;
   }
 
