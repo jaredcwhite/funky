@@ -6,6 +6,9 @@ const CleanCSS = require('clean-css');
 const fs = require('fs');
 const shell = require('shelljs');
 const {argv} = require('yargs');
+const sizeLimit = require('size-limit');
+const filePlugin = require('@size-limit/file');
+const prettyBytes = require('pretty-bytes');
 
 const customProperties = require('./components/custom-properties.js');
 const generator = require('./components/generator.js');
@@ -66,8 +69,15 @@ const init = () => {
 
   shell.exec(`echo "${css}" > ${outputPath}`);
 
-  console.clear();
-  console.log(`\n\n`, green(bold(`✔  CSS generated at '${outputPath}'`), `\n\n`));
+  const getSize = sizeLimit([filePlugin], [outputPath]);
+
+  getSize.then((result) => {
+    const formattedSize = prettyBytes(result[0].size);
+
+    console.clear();
+    console.log(`\n\n`, green(bold(`✔`)), ` Utility CSS generated at '${outputPath}'`);
+    console.log(`   `, `File size is ${bold(formattedSize)} minified and gzipped`, `\n\n`);
+  });
 };
 
 init();
