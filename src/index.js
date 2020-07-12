@@ -57,7 +57,7 @@ const init = () => {
     `.trim();
   });
 
-  css = cleanCSS.minify(css).styles;
+  // css = cleanCSS.minify(css).styles;
 
   // Create the directory if it doesn't already exist
   if (!fs.existsSync(outputPath)) {
