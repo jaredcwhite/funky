@@ -4,12 +4,12 @@
  * @param {Object} config
  * @returns {String}
  */
-module.exports = config => {
+module.exports = (config) => {
   let response = '';
   const tokenKeys = [
     {key: 'colors', prefix: 'color'},
     {key: 'fonts', prefix: 'font'},
-    {key: 'sizeScale', prefix: 'size'}
+    {key: 'sizeScale', prefix: 'size'},
   ];
 
   if (!config.generateCustomProperties) {
@@ -17,9 +17,9 @@ module.exports = config => {
   }
 
   // Loops each option and if that config exists, it generates custom properties
-  tokenKeys.forEach(tokenKey => {
+  tokenKeys.forEach((tokenKey) => {
     if (config.hasOwnProperty(tokenKey.key)) {
-      Object.keys(config[tokenKey.key]).forEach(key => {
+      Object.keys(config[tokenKey.key]).forEach((key) => {
         response += `--${tokenKey.prefix}-${key}: ${config[tokenKey.key][key]};`;
       });
     }

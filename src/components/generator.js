@@ -11,11 +11,11 @@
 module.exports = (config, targets, prefix = '') => {
   let response = '';
 
-  Object.keys(config.utilities).forEach(key => {
+  Object.keys(config.utilities).forEach((key) => {
     const data = config.utilities[key];
 
     if (targets.includes(data.output)) {
-      Object.keys(data.items).forEach(itemKey => {
+      Object.keys(data.items).forEach((itemKey) => {
         response += `
         .${prefix}${key}-${itemKey} {
           ${data.property}: ${data.items[itemKey]};

@@ -50,7 +50,7 @@ const init = () => {
   css += generator(config, ['responsive', 'standard']);
 
   // If there's some breakpoints, generate the classes that are responsive
-  Object.keys(config.breakpoints).forEach(key => {
+  Object.keys(config.breakpoints).forEach((key) => {
     css += `
       @media (width >= ${config.breakpoints[key]}) {
         ${generator(config, ['responsive'], `${key}\\:`)}
@@ -67,7 +67,7 @@ const init = () => {
 
   shell.exec(`echo "${css}" > ${outputPath}`);
 
-  console.clear()
+  console.clear();
   console.log(`\n\n`, green(bold('✔  Token utility classes generated!'), `\n\n`));
 };
 
