@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const {cosmiconfig, cosmiconfigSync} = require('cosmiconfig');
-const {red, blue, green, gray, yellow, bold} = require('chalk');
+const {cosmiconfigSync} = require('cosmiconfig');
+const {red, green, white, yellow, bold} = require('chalk');
 const CleanCSS = require('clean-css');
 const fs = require('fs');
 const shell = require('shelljs');
@@ -26,12 +26,10 @@ const init = () => {
 
   // Bail out if the path isn't defined
   if (pathIndex <= 0 && !config.hasOwnProperty('outputPath')) {
-    console.log(
-      red(
-        `Please determine a path. You can do this by passing the path with a '--out' option or setting 'outputPath' in your config.`
-      )
-    );
-    console.log(blue('Exiting.'));
+    console.log(`\n\n`);
+    console.log(red(bold(`Please determine a path.`)));
+    console.log(white(`Use the '--out' option or set 'outputPath' in your config.`), `\n\n`);
+    console.log(yellow('Exiting.'), `\n\n`);
     return;
   }
 
@@ -41,7 +39,7 @@ const init = () => {
   if (!outputPath.endsWith('.css')) {
     console.log(`\n\n`);
     console.log(red(bold(`Please add a css file to your path.`)));
-    console.log(gray(`Example: path/to/my/folder/tokens.css`, `\n\n`));
+    console.log(white(`Example: path/to/my/folder/tokens.css`, `\n\n`));
     console.log(yellow('Exiting.'), `\n\n`);
     return;
   }
