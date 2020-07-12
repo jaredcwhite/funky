@@ -5,6 +5,7 @@ const {red, green, white, yellow, bold} = require('chalk');
 const CleanCSS = require('clean-css');
 const fs = require('fs');
 const shell = require('shelljs');
+const {argv} = require('yargs');
 
 const customProperties = require('./components/custom-properties.js');
 const generator = require('./components/generator.js');
@@ -14,7 +15,6 @@ let config = require('./default/config.js');
 // The main organ grinder
 const init = () => {
   let css = '';
-  const pathIndex = process.argv.indexOf('--out');
   const cleanCSS = new CleanCSS();
 
   // Try to load the user’s config
@@ -25,7 +25,7 @@ const init = () => {
   }
 
   // Bail out if the path isn't defined
-  if (pathIndex <= 0 && !config.hasOwnProperty('outputPath')) {
+  if (!argv.out && !config.hasOwnProperty('outputPath')) {
     console.log(`\n\n`);
     console.log(red(bold(`Please determine a path.`)));
     console.log(white(`Use the '--out' option or set 'outputPath' in your config.`), `\n\n`);
@@ -33,12 +33,12 @@ const init = () => {
     return;
   }
 
-  const outputPath = config.outputPath || process.argv.slice(pathIndex + 1)[0];
+  const outputPath = config.outputPath || argv.out;
 
   // The path has to contain a filename so we need to bail if that's not the case
   if (!outputPath.endsWith('.css')) {
     console.log(`\n\n`);
-    console.log(red(bold(`Please add a css file to your path.`)));
+    console.log(red(bold(`The output must be a .css file.`)));
     console.log(white(`Example: path/to/my/folder/tokens.css`, `\n\n`));
     console.log(yellow('Exiting.'), `\n\n`);
     return;
@@ -67,7 +67,7 @@ const init = () => {
   shell.exec(`echo "${css}" > ${outputPath}`);
 
   console.clear();
-  console.log(`\n\n`, green(bold('✔  Token utility classes generated!'), `\n\n`));
+  console.log(`\n\n`, green(bold(`✔  Utility css generated at`), `\n\n`));
 };
 
 init();
