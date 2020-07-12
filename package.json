@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/n-elements/funky#readme",
   "dependencies": {
-    "chalk": "4.1.0",
     "clean-css": "4.2.3",
     "cosmiconfig": "6.0.0",
     "shelljs": "0.8.4"
+  },
+  "devDependencies": {
+    "colorette": "1.2.1"
   }
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const {cosmiconfig, cosmiconfigSync} = require('cosmiconfig');
-const chalk = require('chalk');
+const {red, blue, green, bold} = require('chalk');
 const CleanCSS = require('clean-css');
 const fs = require('fs');
 const shell = require('shelljs');
@@ -27,11 +27,11 @@ const init = () => {
   // Bail out if the path isn't defined
   if (pathIndex <= 0 && !config.hasOwnProperty('outputPath')) {
     console.log(
-      chalk.red(
+      red(
         `Please determine a path. You can do this by passing the path with a '--out' option or setting 'outputPath' in your config.`
       )
     );
-    console.log(chalk.blue('Exiting.'));
+    console.log(blue('Exiting.'));
     return;
   }
 
@@ -39,9 +39,9 @@ const init = () => {
 
   // The path has to contain a filename so we need to bail if that's not the case
   if (outputPath.indexOf('.css') < 0) {
-    console.log(chalk.red(`Please add a css file to your path.`));
-    console.log(chalk.red(`Example: path/to/my/folder/tokens.css`));
-    console.log(chalk.blue('Exiting.'));
+    console.log(red(`Please add a css file to your path.`));
+    console.log(red(`Example: path/to/my/folder/tokens.css`));
+    console.log(blue('Exiting.'));
     return;
   }
 
@@ -67,7 +67,8 @@ const init = () => {
 
   shell.exec(`echo "${css}" > ${outputPath}`);
 
-  console.log(chalk.green('Token utility classes generated!'));
+  console.clear()
+  console.log(`\n\n`, green(bold('✔  Token utility classes generated!'), `\n\n`));
 };
 
 init();
