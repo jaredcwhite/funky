@@ -11,7 +11,7 @@ const filePlugin = require('@size-limit/file');
 const prettyBytes = require('pretty-bytes');
 
 const customProperties = require('./components/custom-properties.js');
-const generator = require('./components/generator.js');
+const ruleset = require('./components/ruleset.js');
 
 let config = require('./default/config.js');
 
@@ -49,13 +49,13 @@ const init = () => {
 
   // Add the custom props and the media query-less clases
   css += customProperties(config);
-  css += generator(config, ['responsive', 'standard']);
+  css += ruleset(config, ['responsive', 'standard']);
 
   // If there's some breakpoints, generate the classes that are responsive
   Object.keys(config.breakpoints).forEach((key) => {
     css += `
       @media (width >= ${config.breakpoints[key]}) {
-        ${generator(config, ['responsive'], `${key}-`)}
+        ${ruleset(config, ['responsive'], `${key}-`)}
       }
     `.trim();
   });
