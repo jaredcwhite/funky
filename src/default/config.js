@@ -58,6 +58,14 @@ module.exports = {
       output: 'standard',
       property: 'line-height',
     },
+    'ls': {
+      output: 'responsive',
+      property: 'letter-spacing',
+    },
+    'min-w': {
+      output: 'responsive',
+      property: 'min-width',
+    },
     'max-w': {
       output: 'responsive',
       property: 'max-width',
@@ -65,6 +73,14 @@ module.exports = {
     'w': {
       output: 'responsive',
       property: 'width',
+    },
+    'min-h': {
+      output: 'responsive',
+      property: 'min-height',
+    },
+    'max-h': {
+      output: 'responsive',
+      property: 'max-height',
     },
     'h': {
       output: 'responsive',
@@ -98,19 +114,19 @@ module.exports = {
       output: 'responsive',
       property: 'inset',
     },
-    'inset-t': {
+    't': {
       output: 'responsive',
       property: 'inset-block-start',
     },
-    'inset-b': {
+    'b': {
       output: 'responsive',
       property: 'inset-block-end',
     },
-    'inset-l': {
+    'l': {
       output: 'responsive',
       property: 'inset-inline-start',
     },
-    'inset-r': {
+    'r': {
       output: 'responsive',
       property: 'inset-inline-end',
     },
@@ -281,6 +297,58 @@ module.exports = {
     'grid-template-r': {
       output: 'responsive',
       property: 'grid-template-rows',
+    },
+    'obj-f': {
+      output: 'responsive',
+      property: 'object-fit',
+    },
+    'obj-p': {
+      output: 'responsive',
+      property: 'object-position',
+    },
+    'opacity': {
+      output: 'standard',
+      property: 'opacity',
+    },
+    'order': {
+      output: 'responsive',
+      property: 'order',
+    },
+    'overflow': {
+      output: 'standard',
+      property: 'overflow',
+    },
+    'overflow-x': {
+      output: 'standard',
+      property: 'overflow-x',
+    },
+    'overflow-y': {
+      output: 'standard',
+      property: 'overflow-y',
+    },
+    'pointer-e': {
+      output: 'standard',
+      property: 'pointer-events',
+    },
+    'scroll-b': {
+      output: 'standard',
+      property: 'scroll-behavior',
+    },
+    'text-a': {
+      output: 'standard',
+      property: 'text-align',
+    },
+    'text-d': {
+      output: 'standard',
+      property: 'text-decoration',
+    },
+    'text-s': {
+      output: 'standard',
+      property: 'text-shadow',
+    },
+    'text-t': {
+      output: 'standard',
+      property: 'text-transform',
     },
   },
 };
