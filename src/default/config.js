@@ -122,6 +122,10 @@ module.exports = {
       output: 'responsive',
       property: 'align-self',
     },
+    'justify-c': {
+      output: 'responsive',
+      property: 'justify-content',
+    },
     'place-i': {
       output: 'responsive',
       property: 'place-items',
@@ -269,6 +273,10 @@ module.exports = {
     'grid-template-r': {
       output: 'responsive',
       property: 'grid-template-rows',
+    },
+    'w': {
+      output: 'responsive',
+      property: 'width',
     },
   },
 };
