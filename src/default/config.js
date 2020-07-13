@@ -1,4 +1,10 @@
 module.exports = {
+  breakpoints: {
+    xsm: '30em',
+    sm: '48em',
+    md: '60em',
+    xlg: '100em',
+  },
   utilities: {
     'color': {
       output: 'standard',
@@ -11,6 +17,10 @@ module.exports = {
     'font-s': {
       output: 'responsive',
       property: 'font-size',
+    },
+    'font-style': {
+      output: 'standard',
+      property: 'font-style',
     },
     'font-w': {
       output: 'standard',
@@ -208,11 +218,57 @@ module.exports = {
       output: 'standard',
       property: 'column-span',
     },
-  },
-  breakpoints: {
-    xsm: '30em',
-    sm: '48em',
-    md: '60em',
-    xlg: '100em',
+    'cursor': {
+      output: 'standard',
+      property: 'column-span',
+    },
+    'flex-b': {
+      output: 'responsive',
+      property: 'flex-basis',
+    },
+    'flex-d': {
+      output: 'responsive',
+      property: 'flex-direction',
+    },
+    'flex-g': {
+      output: 'responsive',
+      property: 'flex-grow',
+    },
+    'flex-s': {
+      output: 'responsive',
+      property: 'flex-shrink',
+    },
+    'flex-w': {
+      output: 'responsive',
+      property: 'flex-wrap',
+    },
+    'grid-auto-c': {
+      output: 'responsive',
+      property: 'grid-auto-columns',
+    },
+    'grid-auto-r': {
+      output: 'responsive',
+      property: 'grid-auto-rows',
+    },
+    'grid-c': {
+      output: 'responsive',
+      property: 'grid-column',
+    },
+    'grid-g': {
+      output: 'responsive',
+      property: 'grid-gap',
+    },
+    'grid-r': {
+      output: 'responsive',
+      property: 'grid-row',
+    },
+    'grid-template-c': {
+      output: 'responsive',
+      property: 'grid-template-columns',
+    },
+    'grid-template-r': {
+      output: 'responsive',
+      property: 'grid-template-rows',
+    },
   },
 };
