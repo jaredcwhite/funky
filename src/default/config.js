@@ -350,5 +350,65 @@ module.exports = {
       output: 'standard',
       property: 'text-transform',
     },
+    'transform': {
+      output: 'responsive',
+      property: 'transform',
+    },
+    'transform-o': {
+      output: 'responsive',
+      property: 'transform-origin',
+    },
+    'transform-s': {
+      output: 'responsive',
+      property: 'transform-style',
+    },
+    'transition': {
+      output: 'standard',
+      property: 'transition',
+    },
+    'transition-delay': {
+      output: 'standard',
+      property: 'transition-delay',
+    },
+    'transition-duration': {
+      output: 'standard',
+      property: 'transition-duration',
+    },
+    'transition-prop': {
+      output: 'standard',
+      property: 'transition-property',
+    },
+    'transition-tf': {
+      output: 'standard',
+      property: 'transition-timing-function',
+    },
+    'us': {
+      output: 'standard',
+      property: 'user-select',
+    },
+    'va': {
+      output: 'standard',
+      property: 'vertical-align',
+    },
+    'visibility': {
+      output: 'responsive',
+      property: 'visibility',
+    },
+    'ws': {
+      output: 'standard',
+      property: 'white-space',
+    },
+    'wb': {
+      output: 'standard',
+      property: 'word-break',
+    },
+    'wm': {
+      output: 'responsive',
+      property: 'writing-mode',
+    },
+    'z': {
+      output: 'standard',
+      property: 'z-index',
+    },
   },
 };
