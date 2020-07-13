@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 const {cosmiconfigSync} = require('cosmiconfig');
-const {red, green, white, yellow, bold} = require('chalk');
 const CleanCSS = require('clean-css');
+const prettyBytes = require('pretty-bytes');
+const sizeLimit = require('size-limit');
+const {red, green, white, yellow, bold} = require('chalk');
 const fs = require('fs');
 const shell = require('shelljs');
 const {argv} = require('yargs');
-const sizeLimit = require('size-limit');
 const filePlugin = require('@size-limit/file');
-const prettyBytes = require('pretty-bytes');
 
 const customProperties = require('./components/custom-properties.js');
 const ruleset = require('./components/ruleset.js');
