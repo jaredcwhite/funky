@@ -62,6 +62,14 @@ module.exports = {
       output: 'responsive',
       property: 'max-width',
     },
+    'w': {
+      output: 'responsive',
+      property: 'width',
+    },
+    'h': {
+      output: 'responsive',
+      property: 'height',
+    },
     'p': {
       output: 'responsive',
       property: 'padding',
@@ -273,10 +281,6 @@ module.exports = {
     'grid-template-r': {
       output: 'responsive',
       property: 'grid-template-rows',
-    },
-    'w': {
-      output: 'responsive',
-      property: 'width',
     },
   },
 };
