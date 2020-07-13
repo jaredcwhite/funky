@@ -28,21 +28,21 @@ module.exports = {
     'ml': {
       items: '',
       output: 'responsive',
-      property: 'margin-left',
+      property: 'margin-inline-start',
     },
     'mr': {
       items: '',
       output: 'responsive',
-      property: 'margin-right',
+      property: 'margin-inline-end',
     },
     'mt': {
       items: '',
       output: 'responsive',
-      property: 'margin-top',
+      property: 'margin-block-start',
     },
     'mb': {
       output: 'responsive',
-      property: 'margin-bottom',
+      property: 'margin-block-end',
     },
     'lh': {
       output: 'standard',
@@ -58,19 +58,19 @@ module.exports = {
     },
     'pt': {
       output: 'responsive',
-      property: 'padding-top',
+      property: 'padding-block-start',
     },
     'pb': {
       output: 'responsive',
-      property: 'padding-bottom',
+      property: 'padding-block-end',
     },
     'pl': {
       output: 'responsive',
-      property: 'padding-left',
+      property: 'padding-inline-start',
     },
     'pr': {
       output: 'responsive',
-      property: 'padding-right',
+      property: 'padding-inline-end',
     },
     'position': {
       output: 'responsive',
@@ -79,6 +79,22 @@ module.exports = {
     'inset': {
       output: 'responsive',
       property: 'inset',
+    },
+    'inset-t': {
+      output: 'responsive',
+      property: 'inset-block-start',
+    },
+    'inset-b': {
+      output: 'responsive',
+      property: 'inset-block-end',
+    },
+    'inset-l': {
+      output: 'responsive',
+      property: 'inset-inline-start',
+    },
+    'inset-right': {
+      output: 'responsive',
+      property: 'inset-inline-end',
     },
   },
   breakpoints: {
