@@ -24,7 +24,7 @@ let config = require('./default/config.js');
 /**
  * Main function command
  */
-const init = () => {
+const process = () => {
   /**
    * Init the CSS string
    */
@@ -117,7 +117,7 @@ const init = () => {
     const formattedSize = prettyBytes(result[0].size);
 
     console.clear();
-    console.log(`\n\n`, bold(green(`✔`), bold` Utility CSS generated at '${outputPath}'`));
+    console.log(`\n\n`, bold(green(`✔`), ` Utility CSS generated at: '${outputPath}'`));
     console.log(`   `, `File size is ${bold(formattedSize)} minified and gzipped`, `\n\n`);
   });
 };
@@ -125,4 +125,4 @@ const init = () => {
 /**
  * Run the main process
  */
-init();
+process();
