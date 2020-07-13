@@ -9,20 +9,18 @@
  * @returns {String}
  */
 module.exports = (config, targets, prefix = '') => {
-  let response = '';
+  let rules = '';
 
   Object.keys(config.utilities).forEach((key) => {
-    const data = config.utilities[key];
+    const utility = config.utilities[key];
 
-    if (targets.includes(data.output)) {
-      // Object.keys(data.items).forEach((itemKey) => {
-      response += `
-        [style*='${prefix}${key}:'] {
-          ${data.property}: var(--${prefix}${key});
+    if (targets.includes(utility.output)) {
+      rules += `
+        [style*='--${prefix}${key}:'] {
+          ${utility.property}: var(--${prefix}${key});
         }`.trim();
-      // });
     }
   });
 
-  return response;
+  return rules;
 };

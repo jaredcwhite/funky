@@ -76,7 +76,7 @@ const process = () => {
    * Add custom-properties and standard ruleset (w/o media)
    * to the CSS string.
    */
-  css += customProperties(config);
+  // css += customProperties(config);
   css += ruleset(config, ['responsive', 'standard']);
 
   /**
@@ -94,11 +94,11 @@ const process = () => {
   /**
    * Perform some CSS optimisation and clean
    */
-  css = cleanCSS.minify(css).styles;
+  // css = cleanCSS.minify(css).styles;
 
   /**
    * Proces the generated content with PostCSS
-   * to transpile new CSS properties.
+   * to transpile modern CSS properties.
    */
   postcss([require('postcss-inset')()])
     .process(css, {from: undefined})

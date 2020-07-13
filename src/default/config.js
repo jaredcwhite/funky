@@ -1,29 +1,4 @@
-const colors = {
-  primary: '#ff00ff',
-  light: '#ffffff',
-  dark: '#252525',
-};
-
-// const fonts = {
-//   base: 'Helvetica, sans-serif',
-//   serif: 'Georgia, serif',
-// };
-
-// const sizeScale = {
-//   '300': '0.8rem',
-//   '400': '1rem',
-//   '500': '1.25rem',
-//   '600': '1.56rem',
-//   '700': '1.95rem',
-//   '800': '2.44rem',
-//   '900': '3.05rem',
-// };
-
 module.exports = {
-  colors,
-  // sizeScale,
-  // fonts,
-  generateCustomProperties: true,
   utilities: {
     'bg': {
       output: 'standard',
@@ -36,6 +11,19 @@ module.exports = {
     'f-family': {
       output: 'standard',
       property: 'font-family',
+    },
+    'f-size': {
+      output: 'responsive',
+      property: 'font-size',
+    },
+    'f-weight': {
+      output: 'standard',
+      property: 'font-weight',
+    },
+    'm': {
+      items: '',
+      output: 'responsive',
+      property: 'margin',
     },
     'ml': {
       items: '',
@@ -64,6 +52,10 @@ module.exports = {
       output: 'responsive',
       property: 'max-width',
     },
+    'p': {
+      output: 'responsive',
+      property: 'padding',
+    },
     'pt': {
       output: 'responsive',
       property: 'padding-top',
@@ -79,14 +71,6 @@ module.exports = {
     'pr': {
       output: 'responsive',
       property: 'padding-right',
-    },
-    'fsize': {
-      output: 'responsive',
-      property: 'font-size',
-    },
-    'fweight': {
-      output: 'standard',
-      property: 'font-weight',
     },
     'position': {
       output: 'responsive',
