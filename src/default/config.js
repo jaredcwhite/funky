@@ -92,6 +92,10 @@ module.exports = {
       output: 'responsive',
       property: 'position',
     },
+    'inset': {
+      output: 'responsive',
+      property: 'inset',
+    },
   },
   breakpoints: {
     xsm: '30em',

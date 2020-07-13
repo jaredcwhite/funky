@@ -2,6 +2,7 @@
 
 const {cosmiconfigSync} = require('cosmiconfig');
 const CleanCSS = require('clean-css');
+const postcss = require('postcss');
 const prettyBytes = require('pretty-bytes');
 const sizeLimit = require('size-limit');
 const {red, green, white, yellow, bold} = require('chalk');
@@ -13,21 +14,34 @@ const filePlugin = require('@size-limit/file');
 const customProperties = require('./components/custom-properties.js');
 const ruleset = require('./components/ruleset.js');
 
+/**
+ * Get the default configuration file.
+ * This is used only if the config
+ * is not provided by the user
+ */
 let config = require('./default/config.js');
 
-// The main organ grinder
+/**
+ * Main function command
+ */
 const init = () => {
   let css = '';
   const cleanCSS = new CleanCSS();
 
-  // Try to load the user’s config
+  /**
+   * Search for the user-defined configuration file.
+   * If the config exist, use it as `config` insted of the default one
+   */
   const userConfig = cosmiconfigSync('funky', {searchPlaces: ['funky.config.js']}).search();
 
   if (userConfig) {
     config = userConfig.config;
   }
 
-  // Bail out if the path isn't defined
+  /**
+   * Return the error message if `--out` or `outputPath` are
+   * not defined by the user. If exists, save it to `outputPath`
+   */
   if (!argv.out && !config.hasOwnProperty('outputPath')) {
     console.log(`\n\n`);
     console.log(red(bold(`Please determine a path.`)));
@@ -38,7 +52,10 @@ const init = () => {
 
   const outputPath = config.outputPath || argv.out;
 
-  // The path has to contain a filename so we need to bail if that's not the case
+  /**
+   * Ensure that the output file is a `.css` file,
+   * if not throw the related error message.
+   */
   if (!outputPath.endsWith('.css')) {
     console.log(`\n\n`);
     console.log(red(bold(`The output must be a .css file.`)));
@@ -47,11 +64,17 @@ const init = () => {
     return;
   }
 
-  // Add the custom props and the media query-less clases
+  /**
+   * Add custom-properties and standard ruleset (w/o media)
+   * to the CSS string.
+   */
   css += customProperties(config);
   css += ruleset(config, ['responsive', 'standard']);
 
-  // If there's some breakpoints, generate the classes that are responsive
+  /**
+   * If config.breakpoints are defined, loop them
+   * and generate the selectors that are markes as `responsive`
+   */
   Object.keys(config.breakpoints).forEach((key) => {
     css += `
       @media (width >= ${config.breakpoints[key]}) {
@@ -60,15 +83,27 @@ const init = () => {
     `.trim();
   });
 
-  // css = cleanCSS.minify(css).styles;
-
   // Create the directory if it doesn't already exist
   if (!fs.existsSync(outputPath)) {
     shell.exec(`mkdir -p ${outputPath.replace(/[^\/]*$/, '')}`);
   }
 
-  shell.exec(`echo "${css}" > ${outputPath}`);
+  postcss([require('postcss-inset')()])
+    .process(css)
+    .then((result) => {
+      // fs.writeFile('dest/app.css', result.css, () => true)
+      shell.exec(`echo "${result}" > ${outputPath}`);
+    });
 
+  /**
+   * Perform some CSS optimisation and clean
+   */
+  // css = cleanCSS.minify(css).styles;
+
+  /**
+   * Read the output file and get the file size.
+   * Once done log the size and the confirmation message.
+   */
   const getSize = sizeLimit([filePlugin], [outputPath]);
 
   getSize.then((result) => {
@@ -80,4 +115,7 @@ const init = () => {
   });
 };
 
+/**
+ * Run the main process
+ */
 init();
