@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-const {cosmiconfigSync} = require('cosmiconfig');
-const CleanCSS = require('clean-css');
 const postcss = require('postcss');
-const prettyBytes = require('pretty-bytes');
-const sizeLimit = require('size-limit');
 const {red, green, white, yellow, bold} = require('chalk');
-const fs = require('fs');
+const fs = require('fs-extra');
 const shell = require('shelljs');
 const {argv} = require('yargs');
 const filePlugin = require('@size-limit/file');
+const {cosmiconfigSync} = require('cosmiconfig');
+const prettyBytes = require('pretty-bytes');
+const sizeLimit = require('size-limit');
+const CleanCSS = require('clean-css');
 
 const customProperties = require('./components/custom-properties.js');
 const ruleset = require('./components/ruleset.js');
@@ -25,7 +25,15 @@ let config = require('./default/config.js');
  * Main function command
  */
 const init = () => {
+  /**
+   * Init the CSS string
+   */
   let css = '';
+
+  /**
+   * Create a new CleanCSS instance used to
+   * optimize the output
+   */
   const cleanCSS = new CleanCSS();
 
   /**
