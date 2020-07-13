@@ -1,24 +1,24 @@
 module.exports = {
   utilities: {
-    'bg': {
-      output: 'standard',
-      property: 'background',
-    },
     'color': {
       output: 'standard',
       property: 'color',
     },
-    'f-family': {
+    'font-f': {
       output: 'standard',
       property: 'font-family',
     },
-    'f-size': {
+    'font-s': {
       output: 'responsive',
       property: 'font-size',
     },
-    'f-weight': {
+    'font-w': {
       output: 'standard',
       property: 'font-weight',
+    },
+    'display': {
+      output: 'responsive',
+      property: 'display',
     },
     'm': {
       items: '',
@@ -92,9 +92,121 @@ module.exports = {
       output: 'responsive',
       property: 'inset-inline-start',
     },
-    'inset-right': {
+    'inset-r': {
       output: 'responsive',
       property: 'inset-inline-end',
+    },
+    'all': {
+      output: 'standard',
+      property: 'all',
+    },
+    'align-c': {
+      output: 'responsive',
+      property: 'align-content',
+    },
+    'align-i': {
+      output: 'responsive',
+      property: 'align-items',
+    },
+    'align-s': {
+      output: 'responsive',
+      property: 'align-self',
+    },
+    'place-i': {
+      output: 'responsive',
+      property: 'place-items',
+    },
+    'bg': {
+      output: 'responsive',
+      property: 'background',
+    },
+    'bg-c': {
+      output: 'responsive',
+      property: 'background-color',
+    },
+    'bg-a': {
+      output: 'responsive',
+      property: 'background-attachment',
+    },
+    'bg-i': {
+      output: 'responsive',
+      property: 'background-image',
+    },
+    'bg-p': {
+      output: 'responsive',
+      property: 'background-position',
+    },
+    'bg-r': {
+      output: 'responsive',
+      property: 'background-repeat',
+    },
+    'bg-s': {
+      output: 'responsive',
+      property: 'background-size',
+    },
+    'border': {
+      output: 'responsive',
+      property: 'border',
+    },
+    'border-t': {
+      output: 'responsive',
+      property: 'border-block-start',
+    },
+    'border-b': {
+      output: 'responsive',
+      property: 'border-block-end',
+    },
+    'border-l': {
+      output: 'responsive',
+      property: 'border-inline-start',
+    },
+    'border-r': {
+      output: 'responsive',
+      property: 'border-inline-end',
+    },
+    'border-c': {
+      output: 'responsive',
+      property: 'border-color',
+    },
+    'radius': {
+      output: 'responsive',
+      property: 'border-radius',
+    },
+    'box-sizing': {
+      output: 'standard',
+      property: 'box-sizing',
+    },
+    'shadow': {
+      output: 'standard',
+      property: 'box-shadow',
+    },
+    'filter': {
+      output: 'standard',
+      property: 'filter',
+    },
+    'column-c': {
+      output: 'responsive',
+      property: 'column-count',
+    },
+    'column-f': {
+      output: 'responsive',
+      property: 'column-fill',
+    },
+    'column-g': {
+      output: 'responsive',
+      property: 'column-gap',
+    },
+    'column-r': {
+      output: 'responsive',
+      property: 'column-rule',
+    },
+    'column-s': {
+      output: 'responsive',
+      property: 'column-span',
+    },
+    'cursor': {
+      output: 'standard',
+      property: 'column-span',
     },
   },
   breakpoints: {
