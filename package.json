@@ -4,7 +4,7 @@
   "description": "Your class-based utility",
   "main": "src/index.js",
   "scripts": {
-    "test": "rimraf tokens.css && node src/index.js --out tokens.css",
+    "test": "rimraf test/* && node src/index.js --out test/tokens.css",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
   },

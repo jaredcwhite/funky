@@ -91,22 +91,21 @@ const init = () => {
     `.trim();
   });
 
-  // Create the directory if it doesn't already exist
-  if (!fs.existsSync(outputPath)) {
-    shell.exec(`mkdir -p ${outputPath.replace(/[^\/]*$/, '')}`);
-  }
-
-  postcss([require('postcss-inset')()])
-    .process(css)
-    .then((result) => {
-      // fs.writeFile('dest/app.css', result.css, () => true)
-      shell.exec(`echo "${result}" > ${outputPath}`);
-    });
-
   /**
    * Perform some CSS optimisation and clean
    */
-  // css = cleanCSS.minify(css).styles;
+  css = cleanCSS.minify(css).styles;
+
+  /**
+   * Proces the generated content with PostCSS
+   * to transpile new CSS properties.
+   */
+  postcss([require('postcss-inset')()])
+    .process(css, {from: undefined})
+    .then((result) => {
+      fs.ensureFileSync(outputPath);
+      fs.writeFileSync(outputPath, result.css, () => true);
+    });
 
   /**
    * Read the output file and get the file size.
