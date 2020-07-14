@@ -104,7 +104,7 @@ You may don't need all the utilities that are generated with the default configu
 ```js
 module.exports = {
   breakpoints: {
-    ultralarge: '120em',
+    xlg: '120em',
   },
   utilities: {
     res: {
@@ -123,8 +123,8 @@ The above configuration will generate only the specified utilities and breakpoin
 }
 
 @media (width >= 120em) {
-  [style*='--res-ultralarge:'] {
-    resize: var(--ultralarge-res);
+  [style*='--res-xlg:'] {
+    resize: var(--res-xlg);
   }
 }
 ```
