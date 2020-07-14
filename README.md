@@ -1,18 +1,10 @@
 ## Getting started
 
-First up, install:
+Funky is a CLI tool, you can install it globally or you can run it when you need it using `npx`.
 
 ```bash
-npm install @native-elements/funky
+npm install -g @native-elements/funky
 ```
-
-Then run Funky and determine your CSS output:
-
-```bash
-funky --out src/css/tokens.css
-```
-
-⚠️ You have to set a CSS file output for it to work properly.
 
 ## Config
 
