@@ -10,9 +10,10 @@
     "test": "rimraf test/* && node src/index.js --out test/tokens.css",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db",
-    "release": "git pull && standard-version --release-as patch && git push --follow-tags && yarn publish --new-version <version>",
-    "release:minor": "git pull && standard-version --release-as minor && git push --follow-tags && yarn publish --new-version <version>",
-    "release:beta": "git pull && standard-version --prerelease beta && git push --follow-tags && yarn publish --new-version <version>"
+    "pub": "cross-var yarn publish --access public --new-version $npm_package_version",
+    "release": "git pull && standard-version --release-as patch && git push --follow-tags && yarn pub",
+    "release:minor": "git pull && standard-version --release-as minor && git push --follow-tags && yarn pub",
+    "release:beta": "git pull && standard-version --prerelease beta && git push --follow-tags && yarn pub"
   },
   "bin": {
     "funky": "./src/index.js"
@@ -43,6 +44,7 @@
     "yargs": "15.4.1"
   },
   "devDependencies": {
+    "cross-var": "1.1.0",
     "standard-version": "8.0.2"
   }
 }
