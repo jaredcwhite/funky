@@ -7,6 +7,7 @@ module.exports = {
   utilities: {
     'color': {
       type: 'standard',
+      states: ['hover', 'focus'],
       property: 'color',
     },
     'font-f': {
@@ -160,6 +161,7 @@ module.exports = {
     },
     'bg-c': {
       type: 'responsive',
+      states: ['hover', 'focus'],
       property: 'background-color',
     },
     'bg-a': {
@@ -184,6 +186,7 @@ module.exports = {
     },
     'border': {
       type: 'responsive',
+      states: ['hover', 'focus'],
       property: 'border',
     },
     'border-t': {
@@ -204,6 +207,7 @@ module.exports = {
     },
     'border-c': {
       type: 'responsive',
+      states: ['hover', 'focus'],
       property: 'border-color',
     },
     'radius': {
@@ -216,6 +220,7 @@ module.exports = {
     },
     'shadow': {
       type: 'standard',
+      states: ['hover', 'focus'],
       property: 'box-shadow',
     },
     'filter': {
@@ -246,6 +251,10 @@ module.exports = {
       type: 'standard',
       property: 'cursor',
     },
+    'flex': {
+      type: 'responsive',
+      property: 'flex',
+    },
     'flex-b': {
       type: 'responsive',
       property: 'flex-basis',
@@ -265,6 +274,10 @@ module.exports = {
     'flex-w': {
       type: 'responsive',
       property: 'flex-wrap',
+    },
+    'grid': {
+      type: 'responsive',
+      property: 'grid',
     },
     'grid-auto-c': {
       type: 'responsive',
@@ -336,6 +349,7 @@ module.exports = {
     },
     'text-d': {
       type: 'standard',
+      states: ['hover', 'focus'],
       property: 'text-decoration',
     },
     'text-s': {
@@ -404,6 +418,7 @@ module.exports = {
     },
     'z': {
       type: 'standard',
+      states: ['hover', 'focus'],
       property: 'z-index',
     },
   },
