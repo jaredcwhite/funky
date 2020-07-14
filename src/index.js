@@ -18,7 +18,7 @@ const ruleset = require('./generators/ruleset.js');
  * This is used only if the config
  * is not provided by the user
  */
-let config = require('./config.js');
+let config = require('../config.js');
 
 /**
  *
