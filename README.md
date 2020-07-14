@@ -44,40 +44,40 @@ module.exports = {
 Funky takes that and generates the following CSS:
 
 ```css
-[style*='--margin:'] {
-  margin: var(--margin);
+[style*='--m:'] {
+  margin: var(--m);
 }
-[style*='--margin-hover:'] {
-  margin: var(--margin-hover);
+[style*='--m-hover:'] {
+  margin: var(--m-hover);
 }
 ```
 
 If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 ```css
-[style*='--margin:'] {
-  margin: var(--margin);
+[style*='--m:'] {
+  margin: var(--m);
 }
 
-[style*='--margin-hover:'] {
-  margin: var(--margin-hover);
+[style*='--m-hover:'] {
+  margin: var(--m-hover);
 }
 
 @media (width >= 48em) {
-  [style*='--margin-sm:'] {
-    margin: var(--margin-sm);
+  [style*='--m-sm:'] {
+    margin: var(--m-sm);
   }
-  [style*='--margin-hover-sm:'] {
-    margin: var(--margin-hover-sm);
+  [style*='--m-hover-sm:'] {
+    margin: var(--m-hover-sm);
   }
 }
 
 @media (width >= 60em) {
-  [style*='--margin-md:'] {
-    margin: var(--margin-hover-md);
+  [style*='--m-md:'] {
+    margin: var(--m-hover-md);
   }
-  [style*='--margin-hover-md:'] {
-    margin: var(--margin-hover-md);
+  [style*='--m-hover-md:'] {
+    margin: var(--m-hover-md);
   }
 }
 
