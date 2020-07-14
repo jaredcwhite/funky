@@ -1,13 +1,16 @@
 {
   "name": "@native-elements/funky",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "description": "Your class-based utility",
   "main": "src/index.js",
   "scripts": {
     "test": "rimraf test/* && node src/index.js --out test/tokens.css",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
-    "update:cssdb": "npx browserslist@latest --update-db"
+    "update:cssdb": "npx browserslist@latest --update-db",
+    "release": "git pull && standard-version --release-as patch && git push --follow-tags",
+    "release:minor": "git pull && standard-version --release-as minor && git push --follow-tags",
+    "release:beta": "git pull && standard-version --prerelease alpha && git push --follow-tags"
   },
   "bin": {
     "funky": "./src/index.js"
@@ -37,5 +40,7 @@
     "size-limit": "4.5.4",
     "yargs": "15.4.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "standard-version": "8.0.2"
+  }
 }
