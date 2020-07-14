@@ -93,7 +93,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 ## Configuration
 
-The CLI will use a [default configuration](src/config.js) when you don't provide yours.
+The CLI will use a [default configuration](config.js) when you don't provide yours.
 
 You can fully customize Funky by creating a file at the root of your project called `funky.config.js`.
 
