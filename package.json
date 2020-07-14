@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/n-elements/funky#readme",
   "dependencies": {
-    "@native-elements/funky": "0.0.2-beta.6",
     "@size-limit/preset-small-lib": "4.5.4",
     "clean-css": "4.2.3",
     "colorette": "1.2.1",

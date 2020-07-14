@@ -7,407 +7,407 @@ module.exports = {
   },
   utilities: {
     'color': {
-      output: 'standard',
+      type: 'standard',
       property: 'color',
     },
     'font-f': {
-      output: 'standard',
+      type: 'standard',
       property: 'font-family',
     },
     'font-s': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'font-size',
     },
     'font-style': {
-      output: 'standard',
+      type: 'standard',
       property: 'font-style',
     },
     'font-w': {
-      output: 'standard',
+      type: 'standard',
       property: 'font-weight',
     },
     'display': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'display',
     },
     'm': {
       items: '',
-      output: 'responsive',
+      type: 'responsive',
       property: 'margin',
     },
     'ml': {
       items: '',
-      output: 'responsive',
+      type: 'responsive',
       property: 'margin-inline-start',
     },
     'mr': {
       items: '',
-      output: 'responsive',
+      type: 'responsive',
       property: 'margin-inline-end',
     },
     'mt': {
       items: '',
-      output: 'responsive',
+      type: 'responsive',
       property: 'margin-block-start',
     },
     'mb': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'margin-block-end',
     },
     'lh': {
-      output: 'standard',
+      type: 'standard',
       property: 'line-height',
     },
     'ls': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'letter-spacing',
     },
     'min-w': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'min-width',
     },
     'max-w': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'max-width',
     },
     'w': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'width',
     },
     'min-h': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'min-height',
     },
     'max-h': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'max-height',
     },
     'h': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'height',
     },
     'p': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'padding',
     },
     'pt': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'padding-block-start',
     },
     'pb': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'padding-block-end',
     },
     'pl': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'padding-inline-start',
     },
     'pr': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'padding-inline-end',
     },
     'position': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'position',
     },
     'inset': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'inset',
     },
     't': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'inset-block-start',
     },
     'b': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'inset-block-end',
     },
     'l': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'inset-inline-start',
     },
     'r': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'inset-inline-end',
     },
     'all': {
-      output: 'standard',
+      type: 'standard',
       property: 'all',
     },
     'align-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'align-content',
     },
     'align-i': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'align-items',
     },
     'align-s': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'align-self',
     },
     'justify-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'justify-content',
     },
     'place-i': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'place-items',
     },
     'bg': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'background',
     },
     'bg-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'background-color',
     },
     'bg-a': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'background-attachment',
     },
     'bg-i': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'background-image',
     },
     'bg-p': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'background-position',
     },
     'bg-r': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'background-repeat',
     },
     'bg-s': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'background-size',
     },
     'border': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'border',
     },
     'border-t': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'border-block-start',
     },
     'border-b': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'border-block-end',
     },
     'border-l': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'border-inline-start',
     },
     'border-r': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'border-inline-end',
     },
     'border-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'border-color',
     },
     'radius': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'border-radius',
     },
     'box-sizing': {
-      output: 'standard',
+      type: 'standard',
       property: 'box-sizing',
     },
     'shadow': {
-      output: 'standard',
+      type: 'standard',
       property: 'box-shadow',
     },
     'filter': {
-      output: 'standard',
+      type: 'standard',
       property: 'filter',
     },
     'column-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'column-count',
     },
     'column-f': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'column-fill',
     },
     'column-g': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'column-gap',
     },
     'column-r': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'column-rule',
     },
     'column-s': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'column-span',
     },
     'cursor': {
-      output: 'standard',
+      type: 'standard',
       property: 'column-span',
     },
     'cursor': {
-      output: 'standard',
+      type: 'standard',
       property: 'column-span',
     },
     'flex-b': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'flex-basis',
     },
     'flex-d': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'flex-direction',
     },
     'flex-g': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'flex-grow',
     },
     'flex-s': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'flex-shrink',
     },
     'flex-w': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'flex-wrap',
     },
     'grid-auto-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'grid-auto-columns',
     },
     'grid-auto-r': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'grid-auto-rows',
     },
     'grid-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'grid-column',
     },
     'grid-g': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'grid-gap',
     },
     'grid-r': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'grid-row',
     },
     'grid-template-c': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'grid-template-columns',
     },
     'grid-template-r': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'grid-template-rows',
     },
     'obj-f': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'object-fit',
     },
     'obj-p': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'object-position',
     },
     'opacity': {
-      output: 'standard',
+      type: 'standard',
       property: 'opacity',
     },
     'order': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'order',
     },
     'overflow': {
-      output: 'standard',
+      type: 'standard',
       property: 'overflow',
     },
     'overflow-x': {
-      output: 'standard',
+      type: 'standard',
       property: 'overflow-x',
     },
     'overflow-y': {
-      output: 'standard',
+      type: 'standard',
       property: 'overflow-y',
     },
     'pointer-e': {
-      output: 'standard',
+      type: 'standard',
       property: 'pointer-events',
     },
     'scroll-b': {
-      output: 'standard',
+      type: 'standard',
       property: 'scroll-behavior',
     },
     'text-a': {
-      output: 'standard',
+      type: 'standard',
       property: 'text-align',
     },
     'text-d': {
-      output: 'standard',
+      type: 'standard',
       property: 'text-decoration',
     },
     'text-s': {
-      output: 'standard',
+      type: 'standard',
       property: 'text-shadow',
     },
     'text-t': {
-      output: 'standard',
+      type: 'standard',
       property: 'text-transform',
     },
     'transform': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'transform',
     },
     'transform-o': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'transform-origin',
     },
     'transform-s': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'transform-style',
     },
     'transition': {
-      output: 'standard',
+      type: 'standard',
       property: 'transition',
     },
     'transition-delay': {
-      output: 'standard',
+      type: 'standard',
       property: 'transition-delay',
     },
     'transition-duration': {
-      output: 'standard',
+      type: 'standard',
       property: 'transition-duration',
     },
     'transition-prop': {
-      output: 'standard',
+      type: 'standard',
       property: 'transition-property',
     },
     'transition-tf': {
-      output: 'standard',
+      type: 'standard',
       property: 'transition-timing-function',
     },
     'us': {
-      output: 'standard',
+      type: 'standard',
       property: 'user-select',
     },
     'va': {
-      output: 'standard',
+      type: 'standard',
       property: 'vertical-align',
     },
     'visibility': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'visibility',
     },
     'ws': {
-      output: 'standard',
+      type: 'standard',
       property: 'white-space',
     },
     'wb': {
-      output: 'standard',
+      type: 'standard',
       property: 'word-break',
     },
     'wm': {
-      output: 'responsive',
+      type: 'responsive',
       property: 'writing-mode',
     },
     'z': {
-      output: 'standard',
+      type: 'standard',
       property: 'z-index',
     },
   },

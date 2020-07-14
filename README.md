@@ -22,17 +22,32 @@ You can use also use `npx` to run the cli as-a-service:
 npx @native-elements/funky --out path/to/utilities.css
 ```
 
-## Config
+## Configuration
 
-The cli will use a [default configuration](src/default/config.js) when you don't provide your one.
+The cli will use a [default configuration](src/config.js) when you don't provide yours.
 
-To customise the classes with your own config, create a file at the root of your project called `funky.config.js`.
+You can fully customize Funky by creating a file at the root of your project called `funky.config.js`.
 
-### Default config
+### Extending the default configuration
 
-If you don’t define a config in your project, Funky will use the default config which is this:
+If you are ok with the default configuration but you need to add more utilities, you can extend the built-in config by importing it and exporting a new object from your `funky.config.js`:
 
-```javascript
+```js
+const defaultConfig = require('@native-elements/funky/config.js');
+
+module.exports = {
+  breakpoints: {
+    ...defaultConfig.breakpoints,
+    ultralarge: '120em',
+  },
+  utilities: {
+    ...defaultConfig.utilities,
+    res: {
+      type: 'responsive',
+      property: 'resize',
+    },
+  },
+};
 ```
 
 ## Generated classes example

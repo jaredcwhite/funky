@@ -14,7 +14,7 @@ module.exports = (config, targets, prefix = '') => {
   Object.keys(config.utilities).forEach((key) => {
     const utility = config.utilities[key];
 
-    if (targets.includes(utility.output)) {
+    if (targets.includes(utility.type)) {
       rules += `
         [style*='--${prefix}${key}:'] {
           ${utility.property}: var(--${prefix}${key});

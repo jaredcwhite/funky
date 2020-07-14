@@ -93,8 +93,8 @@ const process = () => {
    * If config.breakpoints are defined, loop them
    * and generate the selectors that are markes as `responsive`
    */
-  // Check if there is at leat one 'responsive' utility
-  const generateMedia = findByKey('output', 'responsive')(config.utilities);
+  // Check if there is at least one 'responsive' utility
+  const generateMedia = findByKey('type', 'responsive')(config.utilities);
   if (generateMedia) {
     Object.keys(config.breakpoints).forEach((key) => {
       css += `
