@@ -49,15 +49,15 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 }
 
 @media (width >= 30em) {
-  [style*='--sm-m:'] {
+  [style*='--m-sm:'] {
     margin: var(--sm-m);
   }
 
-  [style*='--md-m:'] {
+  [style*='--m-md:'] {
     margin: var(--md-m);
   }
 
-  [style*='--lg-m:'] {
+  [style*='--m-lg:'] {
     margin: var(--lg-m);
   }
 }
@@ -95,7 +95,7 @@ The above configuration will generate only the specified utilities and breakpoin
 }
 
 @media (width >= 120em) {
-  [style*='--ultralarge-res:'] {
+  [style*='--res-ultralarge:'] {
     resize: var(--ultralarge-res);
   }
 }
