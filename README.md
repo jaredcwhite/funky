@@ -1,3 +1,5 @@
+The definitive tool to create your own class-less based css utilities.
+
 ## Getting started
 
 Funky is a CLI tool, you can install it globally or you can run it when you need it by using `npx`.
@@ -98,13 +100,13 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 ## Configuration
 
-The CLI will use a [default configuration](config.js) when you don't provide yours.
+The CLI will use a [default configuration](config.js) when you don't provide yours but you can fully customize Funky by creating a file at the root of your project called `funky.config.js`.
 
-You can fully customize Funky by creating a file at the root of your project called `funky.config.js`.
+**Note that the default configuration is full logical properties oriented. So if you have to support obsolete softares, you have to provide your own configuration**
 
 ### New configuration
 
-You may don't need all the utilities that are generated with the default configuration, so if you want to create a new set from scratch, export a new object from the configuration file, following this schema:
+You may don't need all the utilities that are generated with the default configuration, so if you want to create a new set of utilities from scratch, export a new object from the configuration file, following this schema:
 
 ```js
 module.exports = {
