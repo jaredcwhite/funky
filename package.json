@@ -7,6 +7,9 @@
     "src",
     "config.js"
   ],
+  "engines": {
+    "node": ">= 12"
+  },
   "scripts": {
     "test": "rimraf test/* && node src/index.js --out test/utilities.css",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
