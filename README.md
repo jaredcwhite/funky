@@ -6,7 +6,7 @@ Funky is a CLI tool, you can install it globally or you can run it when you need
 yarn add @native-elements/funky
 ```
 
-If you prefer to use `npx`, skip to the [usage section](#usage)
+If you prefer to use it with `npx` and without installing, skip to the [usage section](#usage)
 
 ### Usage
 
@@ -27,10 +27,14 @@ npx @native-elements/funky --out path/to/utilities.css
 Funky takes a configuration object and use it to generate class-less css utilities by using custom properties. By using the following declaration:
 
 ```js
-'m': {
-  type: 'responsive',
-  property: 'margin',
-}
+module.exports = {
+  utilities: {
+    m: {
+      type: 'responsive',
+      property: 'margin',
+    },
+  },
+};
 ```
 
 Funky takes that and generates the following CSS:
