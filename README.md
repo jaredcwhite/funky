@@ -36,7 +36,7 @@ Funky takes a configuration object and use it to generate class-less css utiliti
 Funky takes that and generates the following CSS:
 
 ```css
-[style*='--m:'] {
+[style*='--margin:'] {
   margin: var(--m);
 }
 ```
@@ -44,20 +44,20 @@ Funky takes that and generates the following CSS:
 If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 ```css
-[style*='--m:'] {
+[style*='--margin:'] {
   margin: var(--m);
 }
 
 @media (width >= 30em) {
-  [style*='--m-sm:'] {
+  [style*='--margin-sm:'] {
     margin: var(--sm-m);
   }
 
-  [style*='--m-md:'] {
+  [style*='--margin-md:'] {
     margin: var(--md-m);
   }
 
-  [style*='--m-lg:'] {
+  [style*='--margin-lg:'] {
     margin: var(--lg-m);
   }
 }
