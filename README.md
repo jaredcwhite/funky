@@ -139,7 +139,7 @@ const {breakpoints, utilities} = require('@native-elements/funky/config.js');
 module.exports = {
   breakpoints: {
     ...breakpoints,
-    ultralarge: '120em',
+    xlg: '120em',
   },
   utilities: {
     ...utilities,
