@@ -1,9 +1,8 @@
 module.exports = {
   breakpoints: {
-    xsm: '30em',
     sm: '48em',
     md: '60em',
-    xlg: '100em',
+    lg: '100em',
   },
   utilities: {
     'color': {
