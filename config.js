@@ -29,35 +29,35 @@ module.exports = {
       type: 'responsive',
       property: 'display',
     },
-    'm': {
+    'margin': {
       items: '',
       type: 'responsive',
       property: 'margin',
     },
-    'ml': {
+    'margin-l': {
       items: '',
       type: 'responsive',
       property: 'margin-inline-start',
     },
-    'mr': {
+    'margin-r': {
       items: '',
       type: 'responsive',
       property: 'margin-inline-end',
     },
-    'mt': {
+    'margin-t': {
       items: '',
       type: 'responsive',
       property: 'margin-block-start',
     },
-    'mb': {
+    'margin-b': {
       type: 'responsive',
       property: 'margin-block-end',
     },
-    'lh': {
+    'line-h': {
       type: 'standard',
       property: 'line-height',
     },
-    'ls': {
+    'letter-s': {
       type: 'responsive',
       property: 'letter-spacing',
     },
@@ -69,7 +69,7 @@ module.exports = {
       type: 'responsive',
       property: 'max-width',
     },
-    'w': {
+    'width': {
       type: 'responsive',
       property: 'width',
     },
@@ -81,27 +81,27 @@ module.exports = {
       type: 'responsive',
       property: 'max-height',
     },
-    'h': {
+    'height': {
       type: 'responsive',
       property: 'height',
     },
-    'p': {
+    'padding': {
       type: 'responsive',
       property: 'padding',
     },
-    'pt': {
+    'padding-t': {
       type: 'responsive',
       property: 'padding-block-start',
     },
-    'pb': {
+    'padding-b': {
       type: 'responsive',
       property: 'padding-block-end',
     },
-    'pl': {
+    'padding-l': {
       type: 'responsive',
       property: 'padding-inline-start',
     },
-    'pr': {
+    'padding-r': {
       type: 'responsive',
       property: 'padding-inline-end',
     },
@@ -113,19 +113,19 @@ module.exports = {
       type: 'responsive',
       property: 'inset',
     },
-    't': {
+    'top': {
       type: 'responsive',
       property: 'inset-block-start',
     },
-    'b': {
+    'bottom': {
       type: 'responsive',
       property: 'inset-block-end',
     },
-    'l': {
+    'left': {
       type: 'responsive',
       property: 'inset-inline-start',
     },
-    'r': {
+    'right': {
       type: 'responsive',
       property: 'inset-inline-end',
     },
@@ -243,11 +243,7 @@ module.exports = {
     },
     'cursor': {
       type: 'standard',
-      property: 'column-span',
-    },
-    'cursor': {
-      type: 'standard',
-      property: 'column-span',
+      property: 'cursor',
     },
     'flex-b': {
       type: 'responsive',
@@ -381,27 +377,27 @@ module.exports = {
       type: 'standard',
       property: 'transition-timing-function',
     },
-    'us': {
+    'user-s': {
       type: 'standard',
       property: 'user-select',
     },
-    'va': {
+    'vertical-a': {
       type: 'standard',
       property: 'vertical-align',
     },
-    'v': {
+    'visibilty': {
       type: 'responsive',
       property: 'visibility',
     },
-    'ws': {
+    'white-s': {
       type: 'standard',
       property: 'white-space',
     },
-    'wb': {
+    'word-b': {
       type: 'standard',
       property: 'word-break',
     },
-    'wm': {
+    'writing-m': {
       type: 'responsive',
       property: 'writing-mode',
     },
