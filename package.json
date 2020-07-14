@@ -1,7 +1,7 @@
 {
   "name": "@native-elements/funky",
   "private": false,
-  "version": "0.0.2-beta.3",
+  "version": "0.0.2-beta.4",
   "description": "Your class-based utility",
   "main": "src/index.js",
   "files": [
