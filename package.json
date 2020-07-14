@@ -7,15 +7,15 @@
   "files": [
     "src/index.js",
     "src/config.js",
-    "generators/"
+    "src/generators"
   ],
   "scripts": {
     "test": "rimraf test/* && node src/index.js --out test/tokens.css",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db",
-    "release": "git pull && standard-version --release-as patch && git push --follow-tags && yarn publish",
-    "release:minor": "git pull && standard-version --release-as minor && git push --follow-tags && yarn publish",
-    "release:beta": "git pull && standard-version --prerelease beta && git push --follow-tags && yarn publish"
+    "release": "git pull && standard-version --release-as patch && git push --follow-tags && npm publish",
+    "release:minor": "git pull && standard-version --release-as minor && git push --follow-tags && npm publish",
+    "release:beta": "git pull && standard-version --prerelease beta && git push --follow-tags && npm publish"
   },
   "bin": {
     "funky": "./src/index.js"
