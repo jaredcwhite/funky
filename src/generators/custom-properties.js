@@ -1,6 +1,4 @@
 /**
- * Generates CSS Custom Properties for colors, fonts and size scale
- *
  * @param {Object} config
  * @returns {String}
  */

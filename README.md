@@ -41,7 +41,7 @@ Funky takes that and generates the following CSS:
 }
 ```
 
-If I set the `type` to be `responsive` instead of `standard`, we get this:
+If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 ```css
 [style*='--m:'] {
