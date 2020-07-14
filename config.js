@@ -64,27 +64,27 @@ module.exports = {
     },
     'min-w': {
       type: 'responsive',
-      property: 'min-width',
+      property: 'min-inline-size',
     },
     'max-w': {
       type: 'responsive',
-      property: 'max-width',
+      property: 'max-inline-size',
     },
     'width': {
       type: 'responsive',
-      property: 'width',
+      property: 'inline-size',
     },
     'min-h': {
       type: 'responsive',
-      property: 'min-height',
+      property: 'min-block-size',
     },
     'max-h': {
       type: 'responsive',
-      property: 'max-height',
+      property: 'max-block-size',
     },
     'height': {
       type: 'responsive',
-      property: 'height',
+      property: 'block-size',
     },
     'padding': {
       type: 'responsive',
