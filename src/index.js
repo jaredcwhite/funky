@@ -10,16 +10,15 @@ const {cosmiconfigSync} = require('cosmiconfig');
 const prettyBytes = require('pretty-bytes');
 const sizeLimit = require('size-limit');
 const CleanCSS = require('clean-css');
-
-// const customProperties = require('./generators/custom-properties.js');
 const ruleset = require('./generators/ruleset.js');
+// const customProperties = require('./generators/custom-properties.js');
 
 /**
  * Get the default configuration file.
  * This is used only if the config
  * is not provided by the user
  */
-let config = require('./default/config.js');
+let config = require('./config.js');
 
 /**
  *

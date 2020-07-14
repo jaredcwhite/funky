@@ -4,6 +4,11 @@
   "version": "0.0.2-beta.2",
   "description": "Your class-based utility",
   "main": "src/index.js",
+  "files": [
+    "src/index.js",
+    "src/config.js",
+    "generators/"
+  ],
   "scripts": {
     "test": "rimraf test/* && node src/index.js --out test/tokens.css",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
