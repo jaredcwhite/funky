@@ -28,10 +28,15 @@ Funky takes a configuration object and use it to generate class-less css utiliti
 
 ```js
 module.exports = {
+  breakpoints: {
+    sm: '48em',
+    md: '60em',
+    lg: '100em',
+  },
   utilities: {
     m: {
       // 'responsive' || 'standard'
-      type: 'responsive',
+      type: 'standard',
       // Optional. Generate a variant for each status
       states: ['hover'],
       // CSS property name
