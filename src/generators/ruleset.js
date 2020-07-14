@@ -8,7 +8,7 @@
  * @param {String} prefix=''
  * @returns {String}
  */
-module.exports = (config, targets, prefix = '') => {
+module.exports = (config, targets, prefix = '', suffix = '') => {
   let rules = '';
 
   Object.keys(config.utilities).forEach((key) => {
@@ -16,8 +16,8 @@ module.exports = (config, targets, prefix = '') => {
 
     if (targets.includes(utility.type)) {
       rules += `
-        [style*='--${prefix}${key}:'] {
-          ${utility.property}: var(--${prefix}${key});
+        [style*='--${prefix}${key}${suffix}:'] {
+          ${utility.property}: var(--${prefix}${key}${suffix});
         }`.trim();
     }
   });

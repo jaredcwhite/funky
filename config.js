@@ -365,15 +365,15 @@ module.exports = {
       type: 'standard',
       property: 'transition',
     },
-    'transition-delay': {
+    'transition-dly': {
       type: 'standard',
       property: 'transition-delay',
     },
-    'transition-duration': {
+    'transition-d': {
       type: 'standard',
       property: 'transition-duration',
     },
-    'transition-prop': {
+    'transition-p': {
       type: 'standard',
       property: 'transition-property',
     },
@@ -389,7 +389,7 @@ module.exports = {
       type: 'standard',
       property: 'vertical-align',
     },
-    'visibility': {
+    'v': {
       type: 'responsive',
       property: 'visibility',
     },

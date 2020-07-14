@@ -11,6 +11,7 @@ const prettyBytes = require('pretty-bytes');
 const sizeLimit = require('size-limit');
 const CleanCSS = require('clean-css');
 const ruleset = require('./generators/ruleset.js');
+const media = require('./generators/media.js');
 // const customProperties = require('./generators/custom-properties.js');
 
 /**
@@ -19,17 +20,6 @@ const ruleset = require('./generators/ruleset.js');
  * is not provided by the user
  */
 let config = require('../config.js');
-
-/**
- *
- * @param {String} key The object key to check
- * @param {String} value The value that key should match
- */
-const findByKey = (key, value) => (ogg) => {
-  const firstLevelValues = Object.values(ogg);
-  const hasKeyValue = firstLevelValues.find((innerObj) => innerObj[key] === value);
-  return Boolean(hasKeyValue);
-};
 
 /**
  * Main function command
@@ -88,22 +78,7 @@ const process = () => {
    */
   // css += customProperties(config);
   css += ruleset(config, ['responsive', 'standard']);
-
-  /**
-   * If config.breakpoints are defined, loop them
-   * and generate the selectors that are markes as `responsive`
-   */
-  // Check if there is at least one 'responsive' utility
-  const generateMedia = findByKey('type', 'responsive')(config.utilities);
-  if (generateMedia) {
-    Object.keys(config.breakpoints).forEach((key) => {
-      css += `
-        @media (width >= ${config.breakpoints[key]}) {
-          ${ruleset(config, ['responsive'], `${key}-`)}
-        }
-      `.trim();
-    });
-  }
+  css += media(config);
 
   /**
    * Perform some CSS optimisation and clean
