@@ -48,11 +48,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
   margin: var(--m);
 }
 
-@media (width >=30em) {
-  [style*='--xsm-m:'] {
-    margin: var(--xsm-m);
-  }
-
+@media (width >= 30em) {
   [style*='--sm-m:'] {
     margin: var(--sm-m);
   }
