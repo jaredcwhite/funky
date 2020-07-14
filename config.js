@@ -155,6 +155,7 @@ module.exports = {
     },
     'bg': {
       type: 'responsive',
+      states: ['hover', 'focus'],
       property: 'background',
     },
     'bg-c': {

@@ -19,6 +19,15 @@ module.exports = (config, targets, prefix = '', suffix = '') => {
         [style*='--${prefix}${key}${suffix}:'] {
           ${utility.property}: var(--${prefix}${key}${suffix});
         }`.trim();
+
+      if (utility.states) {
+        utility.states.forEach((state) => {
+          rules += `
+            [style*='--${prefix}${key}-${state}${suffix}:'] {
+              ${utility.property}: var(--${prefix}${key}-${state}${suffix});
+            }`.trim();
+        });
+      }
     }
   });
 

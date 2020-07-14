@@ -30,7 +30,11 @@ Funky takes a configuration object and use it to generate class-less css utiliti
 module.exports = {
   utilities: {
     m: {
+      // 'responsive' || 'standard'
       type: 'responsive',
+      // Optional. Generate a variant for each status
+      states: ['hover'],
+      // CSS property name
       property: 'margin',
     },
   },
@@ -41,7 +45,10 @@ Funky takes that and generates the following CSS:
 
 ```css
 [style*='--margin:'] {
-  margin: var(--m);
+  margin: var(--margin);
+}
+[style*='--margin-hover:'] {
+  margin: var(--margin-hover);
 }
 ```
 
@@ -49,20 +56,37 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 ```css
 [style*='--margin:'] {
-  margin: var(--m);
+  margin: var(--margin);
 }
 
-@media (width >= 30em) {
+[style*='--margin-hover:'] {
+  margin: var(--margin-hover);
+}
+
+@media (width >= 48em) {
   [style*='--margin-sm:'] {
-    margin: var(--sm-m);
+    margin: var(--margin-sm);
   }
+  [style*='--margin-hover-sm:'] {
+    margin: var(--margin-hover-sm);
+  }
+}
 
+@media (width >= 60em) {
   [style*='--margin-md:'] {
-    margin: var(--md-m);
+    margin: var(--margin-hover-md);
   }
+  [style*='--margin-hover-md:'] {
+    margin: var(--margin-hover-md);
+  }
+}
 
+@media (width >= 100em) {
   [style*='--margin-lg:'] {
-    margin: var(--lg-m);
+    margin: var(--margin-hover-lg);
+  }
+  [style*='--margin-hover-lg:'] {
+    margin: var(--margin-hover-lg);
   }
 }
 ```
