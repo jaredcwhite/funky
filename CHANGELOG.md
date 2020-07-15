@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/n-elements/funky/compare/v0.1.1...v0.1.2) (2020-07-15)
+
+
+### Features
+
+* add postcss-preset-env to transpile modern css ([2426ad6](https://github.com/n-elements/funky/commit/2426ad6fd6d2eebae998536e64028a7dc74363aa))
+
 ### [0.1.1](https://github.com/n-elements/funky/compare/v0.1.0...v0.1.1) (2020-07-14)
 
 ## [0.1.0](https://github.com/n-elements/funky/compare/v0.0.9...v0.1.0) (2020-07-14)
