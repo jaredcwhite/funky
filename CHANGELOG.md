@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/n-elements/funky/compare/v0.1.3...v0.1.4) (2020-07-15)
+
+
+### Bug Fixes
+
+* fix default minify value ([48b8cca](https://github.com/n-elements/funky/commit/48b8ccab489170168053fa3d07221a51fa2965e2))
+
 ### [0.1.3](https://github.com/n-elements/funky/compare/v0.1.2...v0.1.3) (2020-07-15)
 
 
