@@ -1,4 +1,5 @@
 module.exports = {
+  minify: true,
   breakpoints: {
     sm: '48em',
     md: '60em',

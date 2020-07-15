@@ -101,7 +101,7 @@ const process = () => {
       stage: 0,
     }),
   ])
-    .process(css, {from: undefined})
+    .process(css, {from: outputPath})
     .then((result) => {
       fs.ensureFileSync(outputPath);
       fs.writeFileSync(outputPath, result.css, () => true);
