@@ -89,7 +89,12 @@ const process = () => {
    * Proces the generated content with PostCSS
    * to transpile modern CSS properties.
    */
-  postcss([require('postcss-inset')()])
+  postcss([
+    require('postcss-preset-env')({
+      stage: 0,
+    }),
+    require('postcss-inset')(),
+  ])
     .process(css, {from: undefined})
     .then((result) => {
       fs.ensureFileSync(outputPath);
