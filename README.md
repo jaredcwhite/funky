@@ -26,10 +26,12 @@ npx @native-elements/funky --out path/to/utilities.css
 
 ## How it works
 
-Funky takes a configuration object and use it to generate class-less css utilities by using custom properties. By using the following declaration:
+Funky takes a configuration object and use it to generate class-less css utilities by using custom properties. By using the following configuration:
 
 ```js
 module.exports = {
+  minify: false, // Default true
+  outputPath: 'utilities.css'
   breakpoints: {
     sm: '48em',
     md: '60em',
@@ -50,6 +52,8 @@ module.exports = {
 
 Funky takes that and generates the following CSS:
 
+→ 📄**utilities.css**
+
 ```css
 [style*='--m:'] {
   margin: var(--m);
@@ -60,6 +64,8 @@ Funky takes that and generates the following CSS:
 ```
 
 If we set the `type` to be `responsive` instead of `standard`, we'll get this:
+
+→ 📄**utilities.css**
 
 ```css
 [style*='--m:'] {
@@ -110,6 +116,8 @@ You may don't need all the utilities that are generated with the default configu
 
 ```js
 module.exports = {
+  minify: false,
+  outputPath: 'path/to/utilities.css'
   breakpoints: {
     xlg: '120em',
   },

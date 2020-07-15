@@ -81,19 +81,25 @@ const process = () => {
   css += media(config);
 
   /**
-   * Perform some CSS optimisation and clean
+   * Perform some CSS minification and clean
    */
-  css = cleanCSS.minify(css).styles;
+  if (argv.minify || (config.hasOwnProperty('minify') && config.minify === true)) {
+    css = cleanCSS.minify(css).styles;
+  } else {
+    css = new CleanCSS({
+      format: 'beautify',
+    }).minify(css).styles;
+  }
 
   /**
-   * Proces the generated content with PostCSS
+   * Process the generated content with PostCSS
    * to transpile modern CSS properties.
    */
   postcss([
+    require('postcss-inset')(),
     require('postcss-preset-env')({
       stage: 0,
     }),
-    require('postcss-inset')(),
   ])
     .process(css, {from: undefined})
     .then((result) => {
