@@ -99,6 +99,9 @@ const process = () => {
     require('postcss-inset')(),
     require('postcss-preset-env')({
       stage: 0,
+      features: {
+        'logical-properties-and-values': false,
+      },
     }),
   ])
     .process(css, {from: outputPath})
