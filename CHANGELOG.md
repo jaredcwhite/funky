@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/n-elements/funky/compare/v0.1.5...v0.1.6) (2020-07-15)
+
+
+### Bug Fixes
+
+* temp fix ofset properties for safari sticky bug ([2aa7df4](https://github.com/n-elements/funky/commit/2aa7df416f10922fdb0481c8cf7aeefc376543c7))
+
 ### [0.1.5](https://github.com/n-elements/funky/compare/v0.1.4...v0.1.5) (2020-07-15)
 
 ### [0.1.4](https://github.com/n-elements/funky/compare/v0.1.3...v0.1.4) (2020-07-15)
