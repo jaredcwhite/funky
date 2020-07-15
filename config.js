@@ -117,19 +117,23 @@ module.exports = {
     },
     'top': {
       type: 'responsive',
-      property: 'inset-block-start',
+      // property: 'inset-block-start',
+      property: 'top',
     },
     'bottom': {
       type: 'responsive',
-      property: 'inset-block-end',
+      // property: 'inset-block-end',
+      property: 'bottom',
     },
     'left': {
       type: 'responsive',
-      property: 'inset-inline-start',
+      // property: 'inset-inline-start',
+      property: 'left',
     },
     'right': {
       type: 'responsive',
-      property: 'inset-inline-end',
+      // property: 'inset-inline-end',
+      property: 'right',
     },
     'all': {
       type: 'standard',
