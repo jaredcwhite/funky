@@ -83,7 +83,7 @@ const process = () => {
   /**
    * Perform some CSS minification and clean
    */
-  if (argv.minify || (config.hasOwnProperty('minify') && config.minify === true)) {
+  if (argv.minify || config.minify === true || !config.hasOwnProperty('minify')) {
     css = cleanCSS.minify(css).styles;
   } else {
     css = new CleanCSS({
