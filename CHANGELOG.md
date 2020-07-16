@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/n-elements/funky/compare/v0.1.6...v0.1.7) (2020-07-16)
+
+
+### Bug Fixes
+
+* minify flag now works as expected ([1248bee](https://github.com/n-elements/funky/commit/1248beef428f4de106447b5ee9594e941a9946df))
+
 ### [0.1.6](https://github.com/n-elements/funky/compare/v0.1.5...v0.1.6) (2020-07-15)
 
 
