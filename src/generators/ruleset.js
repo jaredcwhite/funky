@@ -23,7 +23,7 @@ module.exports = (config, targets, prefix = '', suffix = '') => {
       if (utility.states) {
         utility.states.forEach((state) => {
           rules += `
-            [style*='--${prefix}${key}-${state}${suffix}:'] {
+            [style*='--${prefix}${key}-${state}${suffix}:']:${state} {
               ${utility.property}: var(--${prefix}${key}-${state}${suffix});
             }`.trim();
         });

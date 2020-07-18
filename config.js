@@ -288,6 +288,10 @@ module.exports = {
       type: 'responsive',
       property: 'grid-auto-columns',
     },
+    'grid-auto-f': {
+      type: 'responsive',
+      property: 'grid-auto-flow',
+    },
     'grid-auto-r': {
       type: 'responsive',
       property: 'grid-auto-rows',
@@ -425,6 +429,11 @@ module.exports = {
       type: 'standard',
       states: ['hover', 'focus'],
       property: 'z-index',
+    },
+    'fill': {
+      type: 'standard',
+      states: ['hover'],
+      property: 'fill',
     },
   },
 };
