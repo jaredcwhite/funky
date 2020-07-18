@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/n-elements/funky/compare/v0.1.7...v0.1.8) (2020-07-18)
+
+
+### Features
+
+* fix states and add new props ([5ae0cc4](https://github.com/n-elements/funky/commit/5ae0cc467b118ef7b082208eb788d90b210cda97))
+
 ### [0.1.7](https://github.com/n-elements/funky/compare/v0.1.6...v0.1.7) (2020-07-16)
 
 
