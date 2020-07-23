@@ -12,6 +12,8 @@ const sizeLimit = require('size-limit');
 const CleanCSS = require('clean-css');
 const ruleset = require('./generators/ruleset.js');
 const media = require('./generators/media.js');
+const terminalImage = require('terminal-image');
+const got = require('got');
 // const customProperties = require('./generators/custom-properties.js');
 
 /**
@@ -20,6 +22,12 @@ const media = require('./generators/media.js');
  * is not provided by the user
  */
 let config = require('../config.js');
+
+const showLogo = async () => {
+  await console.clear();
+  await console.log('\n\n');
+  console.log(await terminalImage.file('src/logo.png', {width: '5%', height: '5%'}));
+};
 
 /**
  * Main function command
@@ -51,10 +59,12 @@ const process = () => {
    * not defined by the user. If exists, save it to `outputPath`
    */
   if (!argv.out && !config.hasOwnProperty('outputPath')) {
-    console.log(`\n\n`);
-    console.log(red(bold(`Please determine a path.`)));
-    console.log(white(`Use the '--out' option or set 'outputPath' in your config.`), `\n\n`);
-    console.log(yellow('Exiting.'), `\n\n`);
+    (async () => {
+      await showLogo();
+      await console.log(red(bold(`  `, `Please determine a path.`)));
+      await console.log(white(`  `, `Use the '--out' option or set 'outputPath' in your config.`), `\n\n`);
+      await console.log(yellow(`  `, 'Exiting.'), `\n\n`);
+    })();
     return;
   }
 
@@ -119,13 +129,16 @@ const process = () => {
   getSize.then((result) => {
     const formattedSize = prettyBytes(result[0].size);
 
-    console.clear();
-    console.log(`\n\n`, bold(green(`✔`), ` Utility CSS generated at: '${outputPath}'`));
-    console.log(`   `, `File size is ${bold(formattedSize)} minified and gzipped`, `\n\n`);
+    (async () => {
+      await showLogo();
+      await console.log(bold(green(`✔`), ` Utility CSS generated at: '${outputPath}'`));
+      await console.log(`  `, `File size is ${bold(formattedSize)} minified and gzipped`, `\n\n`);
+    })();
   });
 };
 
 /**
  * Run the main process
  */
+
 process();

@@ -435,5 +435,9 @@ module.exports = {
       states: ['hover'],
       property: 'fill',
     },
+    'list-s': {
+      type: 'standard',
+      property: 'list-style',
+    },
   },
 };
