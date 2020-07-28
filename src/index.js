@@ -26,7 +26,7 @@ let config = require('../config.js');
 const showLogo = async () => {
   await console.clear();
   await console.log('\n\n');
-  console.log(await terminalImage.file('src/logo.png', {width: '5%', height: '5%'}));
+  console.log('  ', await terminalImage.file('src/logo.png', {width: '24px', height: '32px'}));
 };
 
 /**
