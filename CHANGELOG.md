@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/n-elements/funky/compare/v0.2.1...v0.2.2) (2020-07-28)
+
+
+### Bug Fixes
+
+* logo path ([214a4f8](https://github.com/n-elements/funky/commit/214a4f8839d246566b9c2185c06f9d62b28598bb))
+
 ### [0.2.1](https://github.com/n-elements/funky/compare/v0.2.0...v0.2.1) (2020-07-28)
 
 
