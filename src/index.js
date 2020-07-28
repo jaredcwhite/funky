@@ -94,9 +94,14 @@ const process = () => {
   css += media(config);
 
   /**
-   * Perform some CSS minification and clean
+   * Perform CSS minification and clean
    */
-  if (argv.minify || config.minify === true || !config.hasOwnProperty('minify')) {
+  const minify =
+    argv.minify ||
+    (config.hasOwnProperty('minify') && config.minify !== false) ||
+    !config.hasOwnProperty('minify');
+
+  if (minify) {
     css = cleanCSS.minify(css).styles;
   } else {
     css = new CleanCSS({
