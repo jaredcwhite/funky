@@ -371,14 +371,17 @@ module.exports = {
     },
     'transform': {
       type: 'responsive',
+      states: ['hover'],
       property: 'transform',
     },
     'transform-o': {
       type: 'responsive',
+      states: ['hover'],
       property: 'transform-origin',
     },
     'transform-s': {
       type: 'responsive',
+      states: ['hover'],
       property: 'transform-style',
     },
     'transition': {
