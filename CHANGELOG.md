@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/n-elements/funky/compare/v0.2.4...v0.2.5) (2020-07-30)
+
+
+### Features
+
+* add hover state to transform properties ([44208c4](https://github.com/n-elements/funky/commit/44208c4b9a982ad5afb99a6f1ca896fd4d623287))
+
 ### [0.2.4](https://github.com/n-elements/funky/compare/v0.2.3...v0.2.4) (2020-07-28)
 
 
