@@ -12,8 +12,6 @@ const sizeLimit = require('size-limit');
 const CleanCSS = require('clean-css');
 const ruleset = require('./generators/ruleset.js');
 const media = require('./generators/media.js');
-const terminalImage = require('terminal-image');
-const path = require('path');
 // const customProperties = require('./generators/custom-properties.js');
 
 /**
@@ -22,15 +20,6 @@ const path = require('path');
  * is not provided by the user
  */
 let config = require('../config.js');
-
-const showLogo = async () => {
-  await console.clear();
-  await console.log('\n\n');
-  console.log(
-    '  ',
-    await terminalImage.file(path.resolve(`./src/logo.png`), {width: '24px', height: '32px'})
-  );
-};
 
 /**
  * Main function command
@@ -63,7 +52,6 @@ const process = () => {
    */
   if (!argv.out && !config.hasOwnProperty('outputPath')) {
     (async () => {
-      await showLogo();
       await console.log(red(bold(`  `, `Please determine a path.`)));
       await console.log(white(`  `, `Use the '--out' option or set 'outputPath' in your config.`), `\n\n`);
       await console.log(yellow(`  `, 'Exiting.'), `\n\n`);
@@ -138,8 +126,9 @@ const process = () => {
     const formattedSize = prettyBytes(result[0].size);
 
     (async () => {
-      await showLogo();
-      await console.log(bold(green(`✔`), ` Utility CSS generated at: '${outputPath}'`));
+      await console.clear();
+      await console.log('\n\n');
+      await console.log(bold(green(`✔`), ` Funky CSS generated at: '${outputPath}'`));
       await console.log(`  `, `File size is ${bold(formattedSize)} minified and gzipped`, `\n\n`);
     })();
   });
