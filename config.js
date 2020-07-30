@@ -442,5 +442,29 @@ module.exports = {
       type: 'standard',
       property: 'list-style',
     },
+    'mask': {
+      type: 'responsive',
+      states: ['hover'],
+      property: 'mask',
+    },
+    'mask-i': {
+      type: 'responsive',
+      states: ['hover'],
+      property: 'mask-image',
+    },
+    'mask-s': {
+      type: 'responsive',
+      states: ['hover'],
+      property: 'mask-size',
+    },
+    'mask-p': {
+      type: 'responsive',
+      states: ['hover'],
+      property: 'mask-position',
+    },
+    'mask-r': {
+      type: 'responsive',
+      property: 'mask-repeat',
+    },
   },
 };
