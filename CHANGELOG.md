@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/n-elements/funky/compare/v0.2.6...v0.2.7) (2020-07-30)
+
+
+### Features
+
+* add mask properties ([c5e3d0b](https://github.com/n-elements/funky/commit/c5e3d0b1ed3203193ea2a4495ff1b9297728d85c))
+
 ### [0.2.6](https://github.com/n-elements/funky/compare/v0.2.5...v0.2.6) (2020-07-30)
 
 ### [0.2.5](https://github.com/n-elements/funky/compare/v0.2.4...v0.2.5) (2020-07-30)
