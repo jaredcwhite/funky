@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/n-elements/funky/compare/v0.2.7...v0.2.8) (2020-07-31)
+
+
+### Features
+
+* add new xsm = extraSmall breakpoint ([47232b0](https://github.com/n-elements/funky/commit/47232b058ab4752809ca90879524c66375bfb119))
+
 ### [0.2.7](https://github.com/n-elements/funky/compare/v0.2.6...v0.2.7) (2020-07-30)
 
 
