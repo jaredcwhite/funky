@@ -3,7 +3,6 @@
 const postcss = require('postcss');
 const {red, green, white, yellow, bold} = require('chalk');
 const fs = require('fs-extra');
-const shell = require('shelljs');
 const {argv} = require('yargs');
 const filePlugin = require('@size-limit/file');
 const {cosmiconfigSync} = require('cosmiconfig');
