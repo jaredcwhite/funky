@@ -1,6 +1,6 @@
 # Funky [![](https://img.shields.io/npm/v/@native-elements/funky.svg?label=&style=minimal&colorA=000000&colorB=1B84FF)](https://www.npmjs.org/package/@native-elements/funky)
 
-The definitive tool to create your own class-less based css utilities.
+The definitive tool to create your own class-less utility-first css.
 
 ## Getting started
 
