@@ -20,6 +20,8 @@ const media = require('./generators/media.js');
  */
 let config = require('../config.js');
 
+const UTILITY_TYPES = ['responsive', 'standard'];
+
 /**
  * Main function command
  */
@@ -77,7 +79,7 @@ const process = () => {
    * to the CSS string.
    */
   // css += customProperties(config);
-  css += ruleset(config, ['responsive', 'standard']);
+  css += ruleset(config, UTILITY_TYPES);
   css += media(config);
 
   /**
