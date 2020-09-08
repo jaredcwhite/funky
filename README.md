@@ -60,7 +60,7 @@ Funky takes that and generates the following CSS:
 [style*='--m:'] {
   margin: var(--m);
 }
-[style*='--m-hover:'] {
+[style*='--m-hover:']:hover {
   margin: var(--m-hover);
 }
 ```
@@ -74,7 +74,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
   margin: var(--m);
 }
 
-[style*='--m-hover:'] {
+[style*='--m-hover:']:hover {
   margin: var(--m-hover);
 }
 
@@ -82,7 +82,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
   [style*='--m-sm:'] {
     margin: var(--m-sm);
   }
-  [style*='--m-hover-sm:'] {
+  [style*='--m-hover-sm:']:hover {
     margin: var(--m-hover-sm);
   }
 }
@@ -91,7 +91,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
   [style*='--m-md:'] {
     margin: var(--m-hover-md);
   }
-  [style*='--m-hover-md:'] {
+  [style*='--m-hover-md:']:hover {
     margin: var(--m-hover-md);
   }
 }
@@ -100,7 +100,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
   [style*='--margin-lg:'] {
     margin: var(--margin-hover-lg);
   }
-  [style*='--margin-hover-lg:'] {
+  [style*='--margin-hover-lg:']:hover {
     margin: var(--margin-hover-lg);
   }
 }
