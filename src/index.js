@@ -33,13 +33,13 @@ const process = () => {
 
   /**
    * Create a new CleanCSS instance used to
-   * optimize the output
+   * optimise the output
    */
   const cleanCSS = new CleanCSS();
 
   /**
    * Search for the user-defined configuration file.
-   * If the config exist, use it as `config` insted of the default one
+   * If the config exist, use it as `config` instead of the default one
    */
   const userConfig = cosmiconfigSync('funky', {searchPlaces: ['funky.config.js']}).search();
 

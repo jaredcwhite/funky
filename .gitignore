@@ -4,6 +4,9 @@ tokens.css
 test/
 funky.config.js
 
+### Nova ###
+.nova/
+
 ### macOS ###
 # General
 .DS_Store
