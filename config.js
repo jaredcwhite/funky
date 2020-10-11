@@ -160,6 +160,10 @@ module.exports = {
       type: 'responsive',
       property: 'place-items',
     },
+    'place-c': {
+      type: 'responsive',
+      property: 'place-content',
+    },
     'bg': {
       type: 'responsive',
       states: ['hover', 'focus'],
@@ -466,6 +470,18 @@ module.exports = {
     'mask-r': {
       type: 'responsive',
       property: 'mask-repeat',
+    },
+    'clip-p': {
+      type: 'standard',
+      property: 'clip-path',
+    },
+    'backdrop-f': {
+      type: 'standard',
+      property: 'backdrop-filter',
+    },
+    'blend': {
+      type: 'standard',
+      property: 'mix-blend-mode',
     },
   },
 };
