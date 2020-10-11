@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/n-elements/funky/compare/v0.2.10-rc.0...v1.0.0) (2020-10-11)
+
 ### [0.2.10-rc.0](https://github.com/n-elements/funky/compare/v0.2.10-beta.0...v0.2.10-rc.0) (2020-10-11)
 
 
