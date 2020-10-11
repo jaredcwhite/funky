@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10-rc.0](https://github.com/n-elements/funky/compare/v0.2.10-beta.0...v0.2.10-rc.0) (2020-10-11)
+
+
+### Features
+
+* add place-content, backdrop-filter, clip-path and mix-blend-mode props ([f5747bc](https://github.com/n-elements/funky/commit/f5747bc2c73ace2995f07fc6733ff64119bbe32c)), closes [#1](https://github.com/n-elements/funky/issues/1) [#2](https://github.com/n-elements/funky/issues/2) [#3](https://github.com/n-elements/funky/issues/3)
+
 ### [0.2.10-beta.0](https://github.com/n-elements/funky/compare/v0.2.9...v0.2.10-beta.0) (2020-09-08)
 
 ### [0.2.9](https://github.com/n-elements/funky/compare/v0.2.9-rc.0...v0.2.9) (2020-09-08)

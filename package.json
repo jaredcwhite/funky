@@ -1,6 +1,6 @@
 {
   "name": "@native-elements/funky",
-  "version": "0.2.10-beta.0",
+  "version": "0.2.10-rc.0",
   "description": "Your class-based utility",
   "main": "src/index.js",
   "files": [
@@ -42,21 +42,21 @@
   },
   "homepage": "https://github.com/n-elements/funky#readme",
   "dependencies": {
-    "@size-limit/preset-small-lib": "4.6.0",
+    "@size-limit/preset-small-lib": "4.5.5",
     "clean-css": "4.2.3",
     "colorette": "1.2.1",
-    "cosmiconfig": "7.0.0",
+    "cosmiconfig": "6.0.0",
     "fs-extra": "9.0.1",
-    "postcss": "8.1.1",
+    "postcss": "7.0.32",
     "postcss-inset": "1.0.0",
     "postcss-preset-env": "6.7.0",
-    "pretty-bytes": "5.4.1",
+    "pretty-bytes": "5.3.0",
     "rimraf": "3.0.2",
-    "size-limit": "4.6.0",
-    "yargs": "16.0.3"
+    "size-limit": "4.5.5",
+    "yargs": "15.4.1"
   },
   "devDependencies": {
     "cross-var": "1.1.0",
-    "standard-version": "9.0.0"
+    "standard-version": "8.0.2"
   }
 }
