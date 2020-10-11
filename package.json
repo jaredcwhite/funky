@@ -16,7 +16,8 @@
     "update:cssdb": "npx browserslist@latest --update-db",
     "prerelease": "yarn test",
     "pub": "cross-var yarn publish --access public --new-version $npm_package_version",
-    "release": "git pull && standard-version --release-as patch && git push --follow-tags && yarn pub",
+    "release:major": "git pull && standard-version --release-as major && git push --follow-tags && yarn pub",
+    "release:patch": "git pull && standard-version --release-as patch && git push --follow-tags && yarn pub",
     "release:minor": "git pull && standard-version --release-as minor && git push --follow-tags && yarn pub",
     "release:rc": "git pull && standard-version --prerelease rc && git push --follow-tags && yarn pub",
     "release:beta": "git pull && standard-version --prerelease beta rc && git push --follow-tags && yarn pub"
