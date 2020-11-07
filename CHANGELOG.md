@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/n-elements/funky/compare/v1.0.0...v1.1.0) (2020-11-07)
+
+
+### Bug Fixes
+
+* close [#4](https://github.com/n-elements/funky/issues/4), close [#5](https://github.com/n-elements/funky/issues/5) ([07f14e7](https://github.com/n-elements/funky/commit/07f14e741939732d8dbff58a37afdc0bd035fa04))
+
 ## [1.0.0](https://github.com/n-elements/funky/compare/v0.2.10-rc.0...v1.0.0) (2020-10-11)
 
 ### [0.2.10-rc.0](https://github.com/n-elements/funky/compare/v0.2.10-beta.0...v0.2.10-rc.0) (2020-10-11)
