@@ -46,7 +46,7 @@
     "@size-limit/preset-small-lib": "4.7.0",
     "clean-css": "4.2.3",
     "colorette": "1.2.1",
-    "cosmiconfig": "6.0.0",
+    "cosmiconfig": "7.0.0",
     "fs-extra": "9.0.1",
     "postcss": "7.0.32",
     "postcss-inset": "1.0.0",
@@ -54,10 +54,10 @@
     "pretty-bytes": "5.4.1",
     "rimraf": "3.0.2",
     "size-limit": "4.7.0",
-    "yargs": "15.4.1"
+    "yargs": "16.1.0"
   },
   "devDependencies": {
     "cross-var": "1.1.0",
-    "standard-version": "8.0.2"
+    "standard-version": "9.0.0"
   }
 }
