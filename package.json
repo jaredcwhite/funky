@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "rimraf test && node src/index.js --out test/utilities.css",
-    "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
+    "update:deps": "yarn upgrade-interactive && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db",
     "prerelease": "yarn test",
     "pub": "cross-var yarn publish --access public --new-version $npm_package_version",
