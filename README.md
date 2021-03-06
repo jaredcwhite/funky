@@ -89,7 +89,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 @media (width >= 60em) {
   [style*='--m-md:'] {
-    margin: var(--m-hover-md);
+    margin: var(--m-md);
   }
   [style*='--m-hover-md:']:hover {
     margin: var(--m-hover-md);
@@ -98,7 +98,7 @@ If we set the `type` to be `responsive` instead of `standard`, we'll get this:
 
 @media (width >= 100em) {
   [style*='--margin-lg:'] {
-    margin: var(--margin-hover-lg);
+    margin: var(--margin-lg);
   }
   [style*='--margin-hover-lg:']:hover {
     margin: var(--margin-hover-lg);
